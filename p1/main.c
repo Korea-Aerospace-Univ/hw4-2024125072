@@ -8,11 +8,11 @@ int main(void)
     do {
         count++;
         scanf("%d", &attempt);
-        if (attempt > secret) printf("%d 보다 낮습니다\n", attempt);
-        else if (attempt < secret) printf("%d 보다 높습니다\n", attempt);
+        if (attempt > secret) printf("%d>?\n", attempt);
+        else if (attempt < secret) printf("%d<?\n", attempt);
         else {
-            printf("%d 정답입니다\n", attempt);
-            printf("시도횟수는 %d회", count);
+            printf("%d==?\n", attempt);
+            printf("%d", count);
         }
         
     } while (attempt != secret);
