@@ -7,7 +7,7 @@ int main(void)
     char temp = '\0';
     
     scanf("%d", &stringSize);
-    
+    getchar();
     for (i=0; i < stringSize; i++) {
         scanf("%c", &temp);
         if (temp >= 'a' && temp <= 'z') {
