@@ -5,19 +5,16 @@ int main(void)
     int stringSize = 0, alphabetCount = 0, numberCount = 0, i = 0;
     int alphabetCountMax = 0, numberCountMax = 0;
     int isAlphabetSequence = 0, isNumberSequence = 0;
-    char buffer[100] = "";
+    char temp = '\0';
     
     scanf("%d", &stringSize);
     
-    
-    scanf("%s", &buffer);
-    
-    
-    for (i=0; i < stringSize; i++){
-        if (buffer[i] >= 'a' && buffer[i] <= 'z') {
+    for (i=0; i < stringSize; i++) {
+        scanf("%c", &temp);
+        if (temp >= 'a' && temp <= 'z') {
             isAlphabetSequence = 1;
             isNumberSequence = 0;
-        } else if (buffer[i] >= '0' && buffer[i] <= '9') {
+        } else if (temp >= '0' && temp <= '9') {
             isNumberSequence = 1;
             isAlphabetSequence = 0;
         } else {
